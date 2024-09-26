@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="../select/style.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div class="absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 max-w-[806px] w-full p-2 md:p-6">
+        <div class="w-full rounded-3xl max-h-[90vh] overflow-auto">
+            <div class="bg-beige-300 relative py-6 rounded-t-3xl">
+                <img alt="Imagem Calculadora" loading="lazy" width="100%" height="160" decoding="async"
+                    data-nimg="1" class="mx-auto" src="../img/projet.png"
+                    style="color: transparent;">
+                <button id="absoluteButton" class="absolute top-6 right-6">
+                      <img src="../img/absolute.svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <rect width="40" height="40" rx="20" fill="#2F3133" fill-opacity="0.1"></rect>
+                        <path d="M27.4667 28L20 20M20 20L12.5333 12M20 20L28 12M20 20L12 28"
+                            stroke="#262833" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        
+                </button>
+            </div>
+            
+            <div class="flex flex-col p-6 md:p-10 bg-white">
+                <h1 class="text-[32px] leading-[1.25em] font-bold max-w-[385px] text-center self-center">Simulador
+                    Economia de Energia Solar</h1>
+                <p class="pt-4 pb-6 text-grayscale-400 max-w-[442px] leading-[1.25em] self-center text-center">Preencha
+                    os campos abaixo e veja agora mesmo o quanto você poderá economizar investindo na energia solar.</p>
+                <form id="formPage2" class="flex flex-col gap-6 w-full" data-hs-cf-bound="true">
+                    <div class="flex flex-1 flex-col w-full lg:w-auto lg:mr-8">
+                        <p class="text-grayscale-800 font-medium leading-5 mb-[14px] lg:mb-[10px]">Média mensal de gasto
+                            com energia:</p>
+                        <div class="ml-3">
+                            <div class="h-3 rounded-full w-full relative"
+                                style="background: linear-gradient(to right, rgb(1, 176, 64) 0%, rgb(1, 176, 64) 0%, rgb(248, 246, 241) 0%, rgb(248, 246, 241) 100%);">
+                                <div tabindex="0" aria-valuemax="800" aria-valuemin="0" aria-valuenow="0"
+                                    draggable="false" role="slider"
+                                    class="h-6 w-6 bg-grayscale-900 rounded-full border-2 border-white outline-none thumb"
+                                    style="position: absolute; z-index: 0; cursor: grab; user-select: none; touch-action: none; transform: translate(-12px, -6px);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full flex-shrink-0">
+                        <span class="absolute left-5 top-[15px] text-sm font-medium">R$</span>
+                        <input id="energyInput" class="select" placeholder="Arraste ou digite" min="0" type="number">
+                        <ul class="dropdown">
+                            <li>Até R$200</li>
+                            <li>De R$200 a R$400</li>
+                            <li>De R$400 a R$800</li>
+                            <li>Mais de R$800</li>
+                        </ul>
+                    </div>
+                    <p class=" locationSelect font-medium text-font-black">Onde será instalado?</p>
+                    <div class="flex flex-wrap w-full justify-start md:justify-between items-center gap-2">
+                        <label for="RESIDENCIAL"
+                            class="flex items-center h-12 gap-1 bg-white px-[14px] rounded-full border border-radio-border cursor-pointer">
+                            <input id="RESIDENCIAL" class="border-2 bg-beige-300" type="radio" value="Residência"
+                                name="location"><span>Residência</span>
+                        </label>
+                        <label for="EMPRESARIAL"
+                            class="flex items-center h-12 gap-1 bg-white px-[14px] rounded-full border border-radio-border cursor-pointer">
+                            <input id="EMPRESARIAL" class="border-2 bg-beige-300" type="radio" value="Empresa"
+                                name="location"><span>Empresa</span>
+                        </label>
+                        <label for="INDUSTRIAL"
+                            class="flex items-center h-12 gap-1 bg-white px-[14px] rounded-full border border-radio-border cursor-pointer">
+                            <input id="INDUSTRIAL" class="border-2 bg-beige-300" type="radio" value="Indústria"
+                                name="location"><span>Indústria</span>
+                        </label>
+                        <label for="RURAL"
+                            class="flex items-center h-12 gap-1 bg-white px-[14px] rounded-full border border-radio-border cursor-pointer">
+                            <input id="RURAL" class="border-2 bg-beige-300" type="radio" value="Área Rural"
+                                name="location"><span>Área Rural</span>
+                        </label>
+                        <div class="css-18bwft1-control">
+                            <div class="css-hlgwow">
+                                <div class="css-1dimb5e-singleValue" id="react-select-3-placeholder">Cidade</div>
+                                <div class="css-19bb58m" data-value="">
+                                    <input class="cityInput" autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-3-input"
+                                        spellcheck="false" tabindex="0" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true"
+                                        role="combobox" aria-activedescendant="" aria-describedby="react-select-3-placeholder" type="text"
+                                        value="" placeholder="Cidade" required>
+                                </div>
+                            </div>
+                            <div class="css-1wy0on6">
+                                <span class="css-1u9des2-indicatorSeparator"></span>
+                                <div class="css-1xc3v61-indicatorContainer" aria-hidden="true">
+                                    <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-8mmkcg">
+                                        <path
+                                            d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 
+                                                 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 
+                                                 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="text" name="name" class="h-12 text-font-black outline-none placeholder:text-grayscale-300 px-6 w-full rounded-full bg-white border border-radio-border disabled:opacity-60" placeholder="Nome e sobrenome" required value="">
+                    <input type="email" id="emailInput" class="h-12 text-font-black outline-none placeholder:text-grayscale-300 px-6 w-full rounded-full bg-white border border-radio-border disabled:opacity-60" placeholder="Seu e-mail" required value="">
+                    <input type="tel" id="phoneInput" class="h-12 text-font-black outline-none placeholder:text-grayscale-300 px-6 w-full rounded-full bg-white border border-radio-border disabled:opacity-60" placeholder="Seu telefone" required value="">
+                    <button type="submit" id="simulateButton"
+                        class="h-12 w-full text-white px-5 py-[6px] bg-primary-green rounded-full disabled:opacity-60 disabled:cursor-not-allowed"
+                        disabled="">Ver Resultado da Simulação</button>
+                </form>
+             
+            </div>
+        </div>
+    </div>
+   <script src="cadastro_script.js"></script>
+   <script src="../select/script.js"></script>
+   <script src="../dropdown/script.js"></script>
+  
+
+</body>
+
+</html>
+
+
+

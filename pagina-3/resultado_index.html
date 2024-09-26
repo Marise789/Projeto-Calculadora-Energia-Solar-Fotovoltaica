@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+
+    <title>Resultado</title>
+</head>
+
+<body>
+
+    <div class="absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 max-w-[806px] w-full p-2 md:p-6">
+        <div id="resultado"></div>
+        <div class="w-full rounded-3xl max-h-[90vh] overflow-auto">
+            <div class="bg-white relative py-6 rounded-t-3xl"><img alt="Imagem Calculadora" loading="lazy" width="100%"
+                    height="0" decoding="async" data-nimg="1" class="mx-auto" src="../img/projet.png"
+                    style="color: transparent;">
+                <button id="returnButton" class="absolute top-6 right-6" onclick="navigateToPreviousPage()">
+                    <img src="../img/absolute.svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="20" fill="#2F3133" fill-opacity="0.1"></rect>
+                    <path d="M27.4667 28L20 20M20 20L12.5333 12M20 20L28 12M20 20L12 28" stroke="#262833"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+
+                </button>
+            </div>
+            <div class="flex flex-col items-center px-10 pt-5 pb-10 gap-8 text-center bg-beige-300">
+                <h2 class="font-bold text-[32px] text-grayscale-900">Seu Projeto Solar</h2>
+                <p> Investindo na energia solar.
+                </p>
+                <div class="flex flex-col md:flex-row items-stretch w-full">
+                    <div
+                        class="flex flex-col flex-1 items-center md:rounded-r-none md:!rounded-bl-2xl rounded-b-none rounded-2xl px-6 py-10 bg-danger text-center">
+                        <p class="valordaConta">Valor da Conta Atual:</p>
+                        <b class="text-[32px] text-grayscale-900 mt-2"></b>
+                    </div>
+
+
+                    <div id="valorProjeto"
+                        class="flex flex-col flex-1 items-center md:rounded-l-none md:!rounded-tr-2xl rounded-t-none rounded-2xl px-6 py-10 bg-primary-green text-center">
+                        <p class="valorProjeto">Valor do Projeto: R$</p>
+                        <b class="text-[32px] text-white mt-2"></b>
+                    </div>
+                </div>
+                <span id="valorParcela" class="valorParcela">Valor da Parcela: R$</span>
+            </div>
+
+
+            <div id="details-container" class="bg-white w-full p-10 rounded-b-3xl flex flex-col items-center">
+                <div id="average-generation" class="grid w-full grid-cols-2 gap-6 items-start">
+                    <div id="generation-average" class="p-6 bg-beige-300 rounded-2xl flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="24" fill="white"></rect>
+                            <mask x="10" y="10" width="28" height="28">
+                                <rect x="10" y="10" width="28" height="28" fill="#D9D9D9"></rect>
+                            </mask>
+                            <g mask="url(#mask0_3554_11881)">
+                                <path
+                                    d="M22.3429 31.0856L28.2572 23.9999H23.6858L24.5143 17.5141L19.2286 25.1427H23.2L22.3429 31.0856ZM19.4286 35.4284L20.5715 27.4284H14.8572L25.1429 12.5713H27.4286L26.2858 21.7141H33.1429L21.7143 35.4284H19.4286Z"
+                                    fill="#12131A"></path>
+                            </g>
+                        </svg>
+                        <span id="geracaoMedia" class="text-grayscale-900 mt-4 mb-[10px] font-medium">Geração
+                            Média:</span>
+                        <b class="text-center"></b>
+                    </div>
+
+                    <div class="p-6 bg-beige-300 rounded-2xl flex flex-col items-center"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="24" fill="white"></rect>
+                            <mask x="10" y="10" width="28" height="28">
+                                <rect x="10" y="10" width="28" height="28" fill="#D9D9D9"></rect>
+                            </mask>
+                            <g mask="url(#mask0_3554_11939)">
+                                <path
+                                    d="M31 27.5003V25.167H33.3333C33.6639 25.167 33.941 25.2788 34.1646 25.5024C34.3882 25.726 34.5 26.0031 34.5 26.3337C34.5 26.6642 34.3882 26.9413 34.1646 27.1649C33.941 27.3885 33.6639 27.5003 33.3333 27.5003H31ZM31 32.167V29.8337H33.3333C33.6639 29.8337 33.941 29.9455 34.1646 30.1691C34.3882 30.3927 34.5 30.6698 34.5 31.0003C34.5 31.3309 34.3882 31.608 34.1646 31.8316C33.941 32.0552 33.6639 32.167 33.3333 32.167H31ZM26.3333 33.3337C25.6917 33.3337 25.1424 33.1052 24.6854 32.6482C24.2285 32.1913 24 31.642 24 31.0003H21.6667V26.3337H24C24 25.692 24.2285 25.1427 24.6854 24.6857C25.1424 24.2288 25.6917 24.0003 26.3333 24.0003H29.8333V33.3337H26.3333ZM18.1667 29.8337C16.8833 29.8337 15.7847 29.3767 14.8708 28.4628C13.9569 27.5489 13.5 26.4503 13.5 25.167C13.5 23.8837 13.9569 22.785 14.8708 21.8712C15.7847 20.9573 16.8833 20.5003 18.1667 20.5003H19.9167C20.4028 20.5003 20.816 20.3302 21.1562 19.9899C21.4965 19.6496 21.6667 19.2364 21.6667 18.7503C21.6667 18.2642 21.4965 17.851 21.1562 17.5107C20.816 17.1705 20.4028 17.0003 19.9167 17.0003H15.8333C15.5028 17.0003 15.2257 16.8885 15.0021 16.6649C14.7785 16.4413 14.6667 16.1642 14.6667 15.8337C14.6667 15.5031 14.7785 15.226 15.0021 15.0024C15.2257 14.7788 15.5028 14.667 15.8333 14.667H19.9167C21.0444 14.667 22.0069 15.0656 22.8042 15.8628C23.6014 16.66 24 17.6225 24 18.7503C24 19.8781 23.6014 20.8406 22.8042 21.6378C22.0069 22.435 21.0444 22.8337 19.9167 22.8337H18.1667C17.525 22.8337 16.9757 23.0621 16.5187 23.5191C16.0618 23.976 15.8333 24.5253 15.8333 25.167C15.8333 25.8087 16.0618 26.358 16.5187 26.8149C16.9757 27.2719 17.525 27.5003 18.1667 27.5003H20.5V29.8337H18.1667Z"
+                                    fill="#1C1B1F"></path>
+                            </g>
+                        </svg><span id="potenciaFinal" class="text-grayscale-900 mt-4 mb-[10px] font-medium">Potência Final:</span><b
+                            class="text-center"></b></div>
+
+                    <div class="p-6 bg-beige-300 rounded-2xl flex flex-col items-center">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="24" fill="white"></rect>
+                            <mask x="8" y="8" width="32" height="32">
+                                <rect x="8" y="8" width="32" height="32" fill="#D9D9D9"></rect>
+                            </mask>
+                            <g mask="url(#mask0_3554_11949)">
+                                <path d="M16.5913 25.3877H15.5476V33.165H16.5913V25.3877Z" fill="black"></path>
+                                <path d="M28.4427 25.3877H27.3989V33.165H28.4427V25.3877Z" fill="black"></path>
+                                <path
+                                    d="M17.0367 32.6875H15.1023C14.7071 32.6875 14.386 33.012 14.386 33.4112V33.5557H17.7531V33.4112C17.7531 33.012 17.4319 32.6875 17.0367 32.6875Z"
+                                    fill="black"></path>
+                                <path
+                                    d="M28.8881 32.6875H26.9536C26.5585 32.6875 26.2373 33.012 26.2373 33.4112V33.5557H29.6044V33.4112C29.6044 33.012 29.2832 32.6875 28.8881 32.6875Z"
+                                    fill="black"></path>
+                                <path d="M12.3335 26.395H30.5263L34.0025 14.667H15.8085L12.3335 26.395Z" fill="white">
+                                </path>
+                                <path d="M15.2766 19.9919H19.9471L21.2041 15.7471H16.5349L15.2766 19.9919Z"
+                                    fill="black">
+                                </path>
+                                <path d="M13.6985 25.3151H18.369L19.6273 21.0703H14.9568L13.6985 25.3151Z" fill="black">
+                                </path>
+                                <path d="M20.9922 19.9919H25.6627L26.921 15.7471H22.2504L20.9922 19.9919Z" fill="black">
+                                </path>
+                                <path d="M19.4153 25.3151H24.0845L25.3428 21.0703H20.6723L19.4153 25.3151Z"
+                                    fill="black">
+                                </path>
+                                <path d="M26.7087 19.9919H31.378L32.6363 15.7471H27.9658L26.7087 19.9919Z" fill="black">
+                                </path>
+                                <path d="M25.1306 25.3151H29.8011L31.0581 21.0703H26.3889L25.1306 25.3151Z"
+                                    fill="black">
+                                </path>
+                                <path d="M12.3335 26.3955L12.8867 27.4374H31.0808L30.5263 26.3955H12.3335Z"
+                                    fill="black">
+                                </path>
+                                <path d="M30.5261 26.395L31.0806 27.4369L34.5556 15.7101L34.0023 14.667L30.5261 26.395Z"
+                                    fill="black"></path>
+                            </g>
+                        </svg><span id="modulo" class="text-grayscale-900 mt-4 mb-[10px] font-medium">Módulo:</span><b
+                            class="text-center"></b>
+                    </div>
+                    <div class="p-6 bg-beige-300 rounded-2xl flex flex-col items-center"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="24" fill="white"></rect>
+                            <mask x="10" y="9" width="27" height="29">
+                                <rect x="10" y="9" width="27" height="29" fill="#D9D9D9"></rect>
+                            </mask>
+                            <g mask="url(#mask0_3554_11976)">
+                                <mask x="12" y="12" width="24" height="24">
+                                    <rect x="12" y="12" width="24" height="24" fill="#D9D9D9"></rect>
+                                </mask>
+                                <g mask="url(#mask1_3554_11976)">
+                                    <path
+                                        d="M21 33.9502V31.4502C19.2333 30.8335 17.7917 29.7544 16.675 28.2127C15.5583 26.671 15 24.9169 15 22.9502C15 21.7002 15.2375 20.5294 15.7125 19.4377C16.1875 18.346 16.8292 17.396 17.6375 16.5877C18.4458 15.7794 19.3958 15.1377 20.4875 14.6627C21.5792 14.1877 22.7417 13.9502 23.975 13.9502C25.2083 13.9502 26.375 14.1877 27.475 14.6627C28.575 15.1377 29.5333 15.7794 30.35 16.5877C31.1667 17.396 31.8125 18.346 32.2875 19.4377C32.7625 20.5294 33 21.7002 33 22.9502C33 24.9169 32.4375 26.6627 31.3125 28.1877C30.1875 29.7127 28.75 30.7919 27 31.4252V33.9502H25V31.9002C24.8333 31.9335 24.6667 31.9502 24.5 31.9502H23.975C23.8083 31.9502 23.6458 31.946 23.4875 31.9377C23.3292 31.9294 23.1667 31.9169 23 31.9002V33.9502H21ZM24 30.0002C25.9333 30.0002 27.5833 29.3169 28.95 27.9502C30.3167 26.5835 31 24.9335 31 23.0002C31 21.0669 30.3167 19.4169 28.95 18.0502C27.5833 16.6835 25.9333 16.0002 24 16.0002C22.0667 16.0002 20.4167 16.6835 19.05 18.0502C17.6833 19.4169 17 21.0669 17 23.0002C17 24.9335 17.6833 26.5835 19.05 27.9502C20.4167 29.3169 22.0667 30.0002 24 30.0002ZM20 21.0002H28V19.0002H20V21.0002ZM23.25 29.0002L26.25 26.0002L25 24.7502L26.25 23.5002L24.75 22.0002L21.75 25.0002L23 26.2502L21.75 27.5002L23.25 29.0002Z"
+                                        fill="#12131A"></path>
+                                </g>
+                            </g>
+                        </svg><span id="inversor"
+                            class="text-grayscale-900 mt-4 mb-[10px] font-medium">Inversor:</span><b
+                            class="text-center"></b></div>
+                    <div class="p-6 bg-beige-300 rounded-2xl flex flex-col items-center"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="24" fill="white"></rect>
+                            <mask x="10" y="9" width="27" height="29">
+                                <rect x="10" y="9" width="27" height="29" fill="#D9D9D9"></rect>
+                            </mask>
+                            <g mask="url(#mask0_3554_11995)">
+                                <mask x="12" y="12" width="24" height="24">
+                                    <rect x="12" y="12" width="24" height="24" fill="#D9D9D9"></rect>
+                                </mask>
+                                <g mask="url(#mask1_3554_11995)">
+                                    <path
+                                        d="M23.1 31H24.85V29.75C25.6833 29.6 26.4 29.275 27 28.775C27.6 28.275 27.9 27.5333 27.9 26.55C27.9 25.85 27.7 25.2083 27.3 24.625C26.9 24.0417 26.1 23.5333 24.9 23.1C23.9 22.7667 23.2083 22.475 22.825 22.225C22.4417 21.975 22.25 21.6333 22.25 21.2C22.25 20.7667 22.4042 20.425 22.7125 20.175C23.0208 19.925 23.4667 19.8 24.05 19.8C24.5833 19.8 25 19.9292 25.3 20.1875C25.6 20.4458 25.8167 20.7667 25.95 21.15L27.55 20.5C27.3667 19.9167 27.0292 19.4083 26.5375 18.975C26.0458 18.5417 25.5 18.3 24.9 18.25V17H23.15V18.25C22.3167 18.4333 21.6667 18.8 21.2 19.35C20.7333 19.9 20.5 20.5167 20.5 21.2C20.5 21.9833 20.7292 22.6167 21.1875 23.1C21.6458 23.5833 22.3667 24 23.35 24.35C24.4 24.7333 25.1292 25.075 25.5375 25.375C25.9458 25.675 26.15 26.0667 26.15 26.55C26.15 27.1 25.9542 27.5042 25.5625 27.7625C25.1708 28.0208 24.7 28.15 24.15 28.15C23.6 28.15 23.1125 27.9792 22.6875 27.6375C22.2625 27.2958 21.95 26.7833 21.75 26.1L20.1 26.75C20.3333 27.55 20.6958 28.1958 21.1875 28.6875C21.6792 29.1792 22.3167 29.5167 23.1 29.7V31ZM24 34C22.6167 34 21.3167 33.7375 20.1 33.2125C18.8833 32.6875 17.825 31.975 16.925 31.075C16.025 30.175 15.3125 29.1167 14.7875 27.9C14.2625 26.6833 14 25.3833 14 24C14 22.6167 14.2625 21.3167 14.7875 20.1C15.3125 18.8833 16.025 17.825 16.925 16.925C17.825 16.025 18.8833 15.3125 20.1 14.7875C21.3167 14.2625 22.6167 14 24 14C25.3833 14 26.6833 14.2625 27.9 14.7875C29.1167 15.3125 30.175 16.025 31.075 16.925C31.975 17.825 32.6875 18.8833 33.2125 20.1C33.7375 21.3167 34 22.6167 34 24C34 25.3833 33.7375 26.6833 33.2125 27.9C32.6875 29.1167 31.975 30.175 31.075 31.075C30.175 31.975 29.1167 32.6875 27.9 33.2125C26.6833 33.7375 25.3833 34 24 34ZM24 32C26.2333 32 28.125 31.225 29.675 29.675C31.225 28.125 32 26.2333 32 24C32 21.7667 31.225 19.875 29.675 18.325C28.125 16.775 26.2333 16 24 16C21.7667 16 19.875 16.775 18.325 18.325C16.775 19.875 16 21.7667 16 24C16 26.2333 16.775 28.125 18.325 29.675C19.875 31.225 21.7667 32 24 32Z"
+                                        fill="#12131A"></path>
+                                </g>
+                            </g>
+                        </svg><span id="valorDesconto" class="text-grayscale-900 mt-4 mb-[10px] font-medium">Valor
+                            Desconto: R$</span><b class="text-center"></b></div>
+                    <div class="p-6 bg-beige-300 rounded-2xl flex flex-col items-center">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="24" fill="white"></rect>
+                            <mask x="10" y="9" width="27" height="29">
+                                <rect x="10" y="9" width="27" height="29" fill="#D9D9D9"></rect>
+                            </mask>
+                            <g mask="url(#mask0_3554_12001)">
+                                <mask x="12" y="12" width="24" height="24">
+                                    <rect x="12" y="12" width="24" height="24" fill="#D9D9D9"></rect>
+                                </mask>
+                                <g mask="url(#mask1_3554_12001)">
+                                    <path
+                                        d="M24 35C22.1333 35 20.4167 34.575 18.85 33.725C17.2833 32.875 16 31.7417 15 30.325V33H13V27H19V29H16.525C17.325 30.2 18.3792 31.1667 19.6875 31.9C20.9958 32.6333 22.4333 33 24 33C25.25 33 26.4208 32.7625 27.5125 32.2875C28.6042 31.8125 29.5542 31.1708 30.3625 30.3625C31.1708 29.5542 31.8125 28.6042 32.2875 27.5125C32.7625 26.4208 33 25.25 33 24H35C35 25.5167 34.7125 26.9417 34.1375 28.275C33.5625 29.6083 32.775 30.775 31.775 31.775C30.775 32.775 29.6083 33.5625 28.275 34.1375C26.9417 34.7125 25.5167 35 24 35ZM23.1 31V29.7C22.3167 29.5167 21.6792 29.1792 21.1875 28.6875C20.6958 28.1958 20.3333 27.55 20.1 26.75L21.75 26.1C21.95 26.7833 22.2625 27.2958 22.6875 27.6375C23.1125 27.9792 23.6 28.15 24.15 28.15C24.7 28.15 25.1708 28.0208 25.5625 27.7625C25.9542 27.5042 26.15 27.1 26.15 26.55C26.15 26.0667 25.9458 25.675 25.5375 25.375C25.1292 25.075 24.4 24.7333 23.35 24.35C22.3667 24 21.6458 23.5833 21.1875 23.1C20.7292 22.6167 20.5 21.9833 20.5 21.2C20.5 20.5167 20.7375 19.8958 21.2125 19.3375C21.6875 18.7792 22.3333 18.4167 23.15 18.25V17H24.9V18.25C25.5 18.3 26.0458 18.5417 26.5375 18.975C27.0292 19.4083 27.3667 19.9167 27.55 20.5L25.95 21.15C25.8167 20.7667 25.6 20.4458 25.3 20.1875C25 19.9292 24.5833 19.8 24.05 19.8C23.4667 19.8 23.0208 19.925 22.7125 20.175C22.4042 20.425 22.25 20.7667 22.25 21.2C22.25 21.6333 22.4417 21.975 22.825 22.225C23.2083 22.475 23.9 22.7667 24.9 23.1C26.1 23.5333 26.9 24.0417 27.3 24.625C27.7 25.2083 27.9 25.85 27.9 26.55C27.9 27.0333 27.8167 27.4583 27.65 27.825C27.4833 28.1917 27.2625 28.5042 26.9875 28.7625C26.7125 29.0208 26.3917 29.2292 26.025 29.3875C25.6583 29.5458 25.2667 29.6667 24.85 29.75V31H23.1ZM13 24C13 22.4833 13.2875 21.0583 13.8625 19.725C14.4375 18.3917 15.225 17.225 16.225 16.225C17.225 15.225 18.3917 14.4375 19.725 13.8625C21.0583 13.2875 22.4833 13 24 13C25.8667 13 27.5833 13.425 29.15 14.275C30.7167 15.125 32 16.2583 33 17.675V15H35V21H29V19H31.475C30.675 17.8 29.6208 16.8333 28.3125 16.1C27.0042 15.3667 25.5667 15 24 15C22.75 15 21.5792 15.2375 20.4875 15.7125C19.3958 16.1875 18.4458 16.8292 17.6375 17.6375C16.8292 18.4458 16.1875 19.3958 15.7125 20.4875C15.2375 21.5792 15 22.75 15 24H13Z"
+                                        fill="#12131A"></path>
+                                </g>
+                            </g>
+                        </svg><span id="condicaoEspecial" class="text-grayscale-900 mt-4 mb-[10px] font-medium">Condição
+                            Especial:</span><b class="text-center"></b>
+                    </div>
+                    </div>
+                
+                <span class="text-center my-6 text-sm text-bl font-medium"></span>
+                <p class="text-sm">*Carência de 30 dias e em 30x sem juros</p>
+                <a target="_blank"
+                    href="https://api.whatsapp.com/send?phone=5547989035982&amp;text=Ol%C3%A1,%20acabei%20de%20simular%20meu%20projeto%20no%20site%20e%20quero%20mais%20informa%C3%A7%C3%B5es"
+                    class="mt-6 underline">Fale com um consultor</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="resultado_script.js"></script>
+</body>
+
+</htmlutton

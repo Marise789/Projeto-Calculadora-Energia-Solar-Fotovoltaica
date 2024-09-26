@@ -1,0 +1,95 @@
+/* Estiliza a div que contém o valor selecionado */
+.css-1dimb5e-singleValue {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    margin-left: 15px;
+    width: 100px;
+    padding: 5px;
+    color: #494747;
+    /* border: 1px solid #d30707; */
+}
+
+/* Estilo da lista suspensa (ul) */
+ul.dropdown-options {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    list-style-type: none;
+    padding: 5px;
+    margin: 5px 0 0 0;
+    width: 400px;
+    max-height: 100%;
+    overflow-y: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+}
+
+/* Estilo para cada item de opção na lista */
+ul.dropdown-options li {
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid #eee;
+    /* border: 1px solid #d30707; */
+}
+
+/* Efeito hover ao passar o mouse sobre uma opção */
+ul.dropdown-options li:hover {
+    background-color: #92ccf2;
+
+}
+
+input {
+    margin-left: 15px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    color: inherit;
+    background: 0px center;
+    opacity: 1;
+    width: 400px;
+    grid-area: 1 / 2;
+    font: inherit;
+    min-width: 2px;
+    border: 1px solid #eee;
+    outline: 0px;
+    padding: 7px;
+    /* border: 1px solid #d30707; */
+
+}
+
+/* Seta (ícone) para abrir a lista */
+.css-1xc3v61-indicatorContainer {
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 5px;
+    /* border: 1px solid #d30707; */
+}
+
+/* Estilização geral do select para manter o layout */
+.css-18bwft1-control {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 40px;
+    width: 300px;
+    /* border: 1px solid #d30707; */
+
+}
+
+.css-8mmkcg {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    right: 230px;
+
+}
